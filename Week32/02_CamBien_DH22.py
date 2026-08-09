@@ -2,7 +2,7 @@ from machine import Pin
 import dht
 import time
 
-cambien_dht22 = dht.DHT22(Pin(4))
+camBien_dht22 = dht.DHT22(Pin(4))
 
 while True:
     cambien_dht22.measure() # Bật cảm biến
