@@ -18,7 +18,7 @@ WRITE_API_KEY = "YOUR_WRITE_API_KEY"
 # =========================
 # DHT22
 # =========================
-sensor = dht.DHT22(Pin(4))
+camBien_dht22 = dht.DHT22(Pin(4))
 
 
 # Kết nối WiFi
@@ -38,15 +38,13 @@ print(wifi.ifconfig())
 
 while True:
 
-    # Đọc DHT22
-    sensor.measure()
+    cambien_dht22.measure() # Bật cảm biến
 
-    temperature = sensor.temperature()
-    humidity = sensor.humidity()
+    nhietDo = camBien_dht22.temperature() # Lệnh lấy nhiệt độ
+    doAm = camBien_dht22.humidity() # Lệnh lấy độ ẩm
 
-    print("-------------------")
-    print("Temperature:", temperature, "C")
-    print("Humidity:", humidity, "%")
+    print("Nhiet do:", nhietDo, "C")
+    print("Do am:", doAm, "%")
 
     # Gửi ThingSpeak
     url = (
