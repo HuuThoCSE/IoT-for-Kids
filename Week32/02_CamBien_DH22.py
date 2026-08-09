@@ -5,7 +5,7 @@ import time
 camBien_dht22 = dht.DHT22(Pin(4))
 
 while True:
-    cambien_dht22.measure() # Bật cảm biến
+    camBien_dht22.measure() # Bật cảm biến
 
     nhietDo = camBien_dht22.temperature() # Lệnh lấy nhiệt độ
     doAm = camBien_dht22.humidity() # Lệnh lấy độ ẩm
