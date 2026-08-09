@@ -50,8 +50,8 @@ while True:
     url = (
         "https://api.thingspeak.com/update"
         "?api_key=" + WRITE_API_KEY +
-        "&field1=" + str(temperature) +
-        "&field2=" + str(humidity)
+        "&field1=" + str(nhietDo) +
+        "&field2=" + str(doAm)
     )
 
     try:
